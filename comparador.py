@@ -93,12 +93,12 @@ def comparador(xml, nomecsv):
                 print(f'{lindiceau[c]}-{lnomeau[c][0:10]:<5}........................',f'\t\tR${lprecoaau[c]:^5}', f'\t\tR${lpreconau[c]:>5}')
 
         elif op == 2 and confirma == 'S':
-            print(f'{"Nome             ":<5}', f'\t\t\t{"Pr. antigo":^5}', f'\t\t{"Pr. atual":>5}')
+            print(f'{"Nome                             ":<5}', f'\t\t\t{"Pr. antigo":^5}', f'\t\t{"Pr. atual":>5}')
             for c in range(0, len(lindiced)):
                 print(f'{lindiced[c]}-{lnomed[c][0:10]:<5}........................', f'\t\tR${lprecoad[c]:^5}', f'\t\tR${lprecond[c]:>5}')
 
         elif op == 3 and confirma == 'S':
-            print(f'{"Nome             ":<5}', f'\t\t\t{"Pr. antigo":^5}', f'\t\t{"Pr. atual":>5}')
+            print(f'{"Nome                             ":<5}', f'\t\t\t{"Pr. antigo":^5}', f'\t\t{"Pr. atual":>5}')
             for c in range(0, len(lindicen)):
                 print(f'{lindicen[c]}-{lnomen[c][0:10]:<5}........................', f'\t\tR${lprecoan[c]:^5}', f'\t\tR${lpreconn[c]:>5}')
         
