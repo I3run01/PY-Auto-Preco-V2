@@ -2,7 +2,6 @@ def cnpj(xml):
 
     import xml.etree.ElementTree as ET
 
-
     tree = ET.parse(xml)
     root = tree.getroot()
 
@@ -33,6 +32,7 @@ def bibemp(num):
 
 #import:
 import existprod
+import comparador as CP
 
 #programa principal
 xml = str(input('Nome do arquivo: '))+'.xml'
@@ -41,6 +41,8 @@ print(f'cnpj = {cnpj}')
 nomecsv = bibemp(cnpj)
 
 existprod.cadp(xml, nomecsv)
+
+CP.comparador(xml, nomecsv)
 
 
 
