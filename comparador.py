@@ -4,6 +4,7 @@ def comparador(xml, nomecsv):
     import dadoscad
     import pandas as pd
     import time
+    import InLondrisoft as IS
 
     tree = ET.parse(xml)
     root = tree.getroot()
@@ -23,7 +24,7 @@ def comparador(xml, nomecsv):
     lprecoaau = []
     lcodeina = []
 
-    lindicead = []
+    lindiced = []
     lnomed = []
     lprecond =[]
     lprecoad = []
@@ -58,7 +59,7 @@ def comparador(xml, nomecsv):
             lcodeina.append(codigo)
 
         elif float(precon) < float(precoa):
-            lindicead.append(indice)
+            lindiced.append(indice)
             lprecond.append(precon)
             lprecoad.append(precoa)
             lnomed.append(nome)
@@ -76,22 +77,46 @@ def comparador(xml, nomecsv):
     1 - Ver produtos que aumentaram
     2 = Ver produtos que diminuiram
     3 - Ver produtos que não tiveram aumento
+    4 - Atualizar os preços que aumentaram na LS
+    5 - Atualizar os preços que diminuiram na LS
+    6 - Imprimir os preços que aumentaram
+    7 - Imprimir os preços que diminuiram
     ''')
 
     op = int(input('Opção: '))
     confirma = input(str('Confirma (S/N)')).strip().upper()[0]
     print(60*'-')
 
+    while True:
+        if op == 1 and confirma == 'S':
+            print(f'{"Nome             ":<5}', f'\t\t\t{"Pr. antigo":^5}', f'\t\t{"Pr. atual":>5}')
+            for c in range(0, len(lindiceau)):
+                print(f'{lnomeau[c][0:17]:<5}...',f'\t\tR${lprecoaau[c]:^5}', f'\t\tR${lpreconau[c]:>5}')
 
-    if op == 1 and confirma == 'S':
-        print(f'{"Nome             ":<5}', f'\t\t\t{"Pr. antigo":^5}', f'\t\t{"Pr. atual":>5}')
-        for c in range(0, len(lindiceau)):
-            print(f'{lnomeau[c][0:17]:<5}...',f'\t\tR${lprecoaau[c]:^5}', f'\t\tR${lpreconau[c]:>5}')
+        elif op == 2 and confirma == 'S':
+            print(f'{"Nome             ":<5}', f'\t\t\t{"Pr. antigo":^5}', f'\t\t{"Pr. atual":>5}')
+            for c in range(0, len(lindiced)):
+                print(f'{lnomed[c][0:17]:<5}...', f'\t\tR${lprecoad[c]:^5}', f'\t\tR${lprecond[c]:>5}')
 
-
-
-
+        elif op == 3 and confirma == 'S':
+            print(f'{"Nome             ":<5}', f'\t\t\t{"Pr. antigo":^5}', f'\t\t{"Pr. atual":>5}')
+            for c in range(0, len(lindicen)):
+                print(f'{lnomen[c][0:17]:<5}...', f'\t\tR${lprecoan[c]:^5}', f'\t\tR${lpreconn[c]:>5}')
         
+        elif op == 4 and confirma == 'S':
+            IS.apreco(lcodeina, lpreconau)
+
+        elif op == 5 and confirma == 'S':
+            IS.apreco(lcodeind, lprecond)
+
+        elif op == 6 and confirma == 'S':
+            IS.ietiqueta(lcodeina)
+
+        elif op == 6 and confirma == 'S':
+            IS.ietiqueta(lcodeind)
+
+
+
 
 
 
