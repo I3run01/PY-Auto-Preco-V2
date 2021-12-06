@@ -79,7 +79,7 @@ def cadp(xml, nomecsv):
                     print(30*'-=')
                     break
                 if ops == 'S' and op =='3':
-                    display(df)
+                    print(df)
         else:
             print('Todos os itens estão cadastrados')
             while True:
@@ -93,7 +93,7 @@ def cadp(xml, nomecsv):
                 if op == '1' and opc == 'S':
                     break
                 elif op == '2' and opc =='S':
-                    display(df)
+                    print(df)
                 elif op =='3' and opc =='S':
                     IS.apreco(lnprod,lnpreco)
                 elif op =='4' and opc =='S':
