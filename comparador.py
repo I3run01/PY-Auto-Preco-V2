@@ -103,7 +103,15 @@ def comparador(xml, nomecsv):
                 print(f'{lindicen[c]}-{lnomen[c][0:10]:<5}........................', f'\t\tR${lprecoan[c]:^5}', f'\t\tR${lpreconn[c]:>5}')
         
         elif op == 4 and confirma == 'S':
-            IS.apreco(lcodeinau, lpreconau)
+            #IS.apreco(lcodeinau, lpreconau)
+            #c = 0
+            for indice in lindiceau:
+                indice = int(indice)
+                print(indice)
+                print(lpreconau[c].replace(',','.'))
+                #df = df.iloc[indice][5] = str(lpreconau[c].replace(',','.'))
+                #df.to_csv(nomecsv)
+                c = c+1
 
         elif op == 5 and confirma == 'S':
             IS.apreco(lcodeind, lprecond)
