@@ -53,24 +53,24 @@ def comparador(xml, nomecsv):
 
         if float(precon) > float(precoa):
             lindiceau.append(indice)
-            lpreconau.append(str(precon))
+            lpreconau.append(str(precon).replace('.',','))
             lprecoaau.append(precoa)
             lnomeau.append(nome)
-            lcodeinau.append(codigo)
+            lcodeinau.append(str(codigo))
 
         elif float(precon) < float(precoa):
             lindiced.append(indice)
-            lprecond.append(str(precon))
+            lprecond.append(str(precon).replace('.',','))
             lprecoad.append(precoa)
             lnomed.append(nome)
-            lcodeind.append(codigo)
+            lcodeind.append(str(codigo))
 
         else:
             lindicen.append(indice)
-            lpreconn.append(str(precon))
+            lpreconn.append(str(precon).replace('.',','))
             lprecoan.append(precoa)
             lnomen.append(nome)
-            lcodeinn.append(codigo)
+            lcodeinn.append(str(codigo))
     while True:
         print('''
         0 - Finalizar o SoftWare
@@ -88,19 +88,19 @@ def comparador(xml, nomecsv):
         print(60*'-')
 
         if op == 1 and confirma == 'S':
-            print(f'{"Nome             ":<5}', f'\t\t\t{"Pr. antigo":^5}', f'\t\t{"Pr. atual":>5}')
+            print(f'{"Nome                             ":<5}', f'\t\t\t{"Pr. antigo":^5}', f'\t\t{"Pr. atual":>5}')
             for c in range(0, len(lindiceau)):
-                print(f'{lnomeau[c][0:17]:<5}...',f'\t\tR${lprecoaau[c]:^5}', f'\t\tR${lpreconau[c]:>5}')
+                print(f'{lindiceau[c]}-{lnomeau[c][0:10]:<5}........................',f'\t\tR${lprecoaau[c]:^5}', f'\t\tR${lpreconau[c]:>5}')
 
         elif op == 2 and confirma == 'S':
             print(f'{"Nome             ":<5}', f'\t\t\t{"Pr. antigo":^5}', f'\t\t{"Pr. atual":>5}')
             for c in range(0, len(lindiced)):
-                print(f'{lnomed[c][0:17]:<5}...', f'\t\tR${lprecoad[c]:^5}', f'\t\tR${lprecond[c]:>5}')
+                print(f'{lindiced[c]}-{lnomed[c][0:10]:<5}........................', f'\t\tR${lprecoad[c]:^5}', f'\t\tR${lprecond[c]:>5}')
 
         elif op == 3 and confirma == 'S':
             print(f'{"Nome             ":<5}', f'\t\t\t{"Pr. antigo":^5}', f'\t\t{"Pr. atual":>5}')
             for c in range(0, len(lindicen)):
-                print(f'{lnomen[c][0:17]:<5}...', f'\t\tR${lprecoan[c]:^5}', f'\t\tR${lpreconn[c]:>5}')
+                print(f'{lindicen[c]}-{lnomen[c][0:10]:<5}........................', f'\t\tR${lprecoan[c]:^5}', f'\t\tR${lpreconn[c]:>5}')
         
         elif op == 4 and confirma == 'S':
             IS.apreco(lcodeinau, lpreconau)

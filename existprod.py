@@ -84,7 +84,7 @@ def cadp(xml, nomecsv):
             print('Todos os itens estão cadastrados')
             while True:
                 print(30*'-')
-                print('1 - Para continuar\n2 - Ver a lista de cadastro\n3 - Cadastrar na Londrisoft\n4- Imprimir os produtos cadastrados na LS')
+                print('1 - Para continuar\n2 - Ver a lista de cadastro\n3 - Cadastrar na Londrisoft\n4 - Imprimir os produtos cadastrados na LS')
                 print(30*'-')
                 time.sleep(1)
                 op = str(input('Opção: '))
