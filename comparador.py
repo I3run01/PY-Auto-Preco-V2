@@ -58,19 +58,19 @@ def comparador(xml, nomecsv):
             lnomeau.append(nome)
             lcodeinau.append(codigo)
 
-      #  elif float(precon) < float(precoa):
-       #     lindiced.append(indice)
-        #    lprecond.append(str(precon))
-          #  lprecoad.append(precoa)
-          #  lnomed.append(nome)
-           # lcodeind.append(codigo)
+        elif float(precon) < float(precoa):
+            lindiced.append(indice)
+            lprecond.append(str(precon))
+            lprecoad.append(precoa)
+            lnomed.append(nome)
+            lcodeind.append(codigo)
 
-      # else:
-          #  lindicen.append(indice)
-          #  lpreconn.append(str(precon))
-          #  lprecoan.append(precoa)
-          #  lnomen.append(nome)
-         #   lcodeinn.append(codigo)
+        else:
+            lindicen.append(indice)
+            lpreconn.append(str(precon))
+            lprecoan.append(precoa)
+            lnomen.append(nome)
+            lcodeinn.append(codigo)
     while True:
         print('''
         0 - Finalizar o SoftWare
