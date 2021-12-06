@@ -70,9 +70,7 @@ def comparador(xml, nomecsv):
             lprecoan.append(precoa)
             lnomen.append(nome)
             lcodeinn.append(codigo)
-            
 
-    time.sleep(0.5)
     print('''
     0 - Finalizar o SoftWare
     1 - Ver produtos que aumentaram
@@ -82,10 +80,13 @@ def comparador(xml, nomecsv):
 
     op = int(input('Opção: '))
     confirma = input(str('Confirma (S/N)')).strip().upper()[0]
+    print(60*'-')
+
 
     if op == 1 and confirma == 'S':
+        print(f'{"Nome             ":<5}', f'\t\t\t{"Pr. antigo":^5}', f'\t\t{"Pr. atual":>5}')
         for c in range(0, len(lindiceau)):
-            print(f'{lnomeau[c][0:17]:<5}...',f'\t\t{lprecoaau[c]:^5}', f'{lpreconau[c]:>5}')
+            print(f'{lnomeau[c][0:17]:<5}...',f'\t\tR${lprecoaau[c]:^5}', f'\t\tR${lpreconau[c]:>5}')
 
 
 
