@@ -47,15 +47,24 @@ def preco(cProd, margem, quantunit, xml):
     for qCom in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}prod/{link}qCom"):
         lqCom.append(qCom.text)
 
+    lvDesc = []
+    for vDesc in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}prod/{link}vDesc"):
+        lvDesc.append(vDesc.text)
+
     #calculo do preco
 
-
     termo = lcProdin.index(cProd)
+    try:
+        desconto = float(lvDesc[termo])
+    except:
+        desconto = float(0)
+
     try:
         imposto = float(lvICMSST[termo])+float(lvFCPST[termo])
     except:
         imposto = float(0)
-    preco = ((1+(margem/100))*((float(lvProd[termo])+imposto)/float(lqCom[termo])))/quantunit
+
+    preco = ((1+(margem/100))*((float(lvProd[termo])+imposto-desconto)/float(lqCom[termo])))/quantunit
     preco = str(preco)
     ponto = preco.find('.')
     precoint = preco[0:ponto]
