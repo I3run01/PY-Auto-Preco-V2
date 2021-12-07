@@ -103,21 +103,34 @@ def comparador(xml, nomecsv):
                 print(f'{lindicen[c]}-{lnomen[c][0:10]:<5}........................', f'\t\tR${lprecoan[c]:^5}', f'\t\tR${lpreconn[c]:>5}')
         
         elif op == 4 and confirma == 'S':
-            #IS.apreco(lcodeinau, lpreconau)
-            #c = 0
+            IS.apreco(lcodeinau, lpreconau)
+            c = 0
             for indice in lindiceau:
                 indice = int(indice)
                 print(indice)
-                print(lpreconau[c].replace(',','.'))
-                #df = df.iloc[indice][5] = str(lpreconau[c].replace(',','.'))
-                #df.to_csv(nomecsv)
+                preconau2 = lpreconau[c]
+                preconau2 = preconau2.replace(',','.')
+                print(preconau2)
+                df.loc[indice] = [df.iloc[indice][0],df.iloc[indice][1],df.iloc[indice][2],df.iloc[indice][3],df.iloc[indice][4],preconau2]
+                df.to_csv(nomecsv)
                 c = c+1
 
         elif op == 5 and confirma == 'S':
             IS.apreco(lcodeind, lprecond)
+            c = 0
+            for indice in lindiceau:
+                indice = int(indice)
+                print(indice)
+                preconau2 = lpreconau[c]
+                preconau2 = preconau2.replace(',','.')
+                print(preconau2)
+                df.loc[indice] = [df.iloc[indice][0],df.iloc[indice][1],df.iloc[indice][2],df.iloc[indice][3],df.iloc[indice][4],preconau2]
+                df.to_csv(nomecsv)
+                c = c+1
 
         elif op == 6 and confirma == 'S':
             IS.ietiqueta(lcodeinau)
+
 
         elif op == 7 and confirma == 'S':
             IS.ietiqueta(lcodeind)
