@@ -39,6 +39,10 @@ def bibemp(num):
         nome = 'WMS'
         nomecsv = 'WMS BD.csv'
 
+    if num == '03303285000128':
+        nome = 'Arrojito'
+        nomecsv = 'Arrojito BD.csv'
+
 
 
     print('')
