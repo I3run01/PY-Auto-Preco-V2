@@ -47,6 +47,10 @@ def bibemp(num):
         nome = 'Triunfante'
         nomecsv = 'Triunfante BD.csv'
 
+    if num == '01333984000438':
+        nome = 'Segalas'
+        nomecsv = 'Segalas BD.csv'
+
     print('')
     print(f'Essa nota é da empresa: {nome}')
     print(30*'-')
