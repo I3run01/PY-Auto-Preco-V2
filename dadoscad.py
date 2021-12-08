@@ -27,13 +27,14 @@ def preco(cProd, margem, quantunit, xml):
     link = '{http://www.portalfiscal.inf.br/nfe}'
 
     #Busca das informações necessárias
-    lvICMSST = []
-    for vICMSST in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}imposto/{link}ICMS/{link}ICMS10/{link}vICMSST"):
-        lvICMSST.append(vICMSST.text)
-
-    lvFCPST = []
-    for vFCPST in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}imposto/{link}ICMS/{link}ICMS10/{link}vFCPST"):
-        lvFCPST.append(vFCPST.text)
+    lvICMST90 = []
+    for ICMS in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}imposto/{link}ICMS"):
+        vICMSST90 = ICMS.find(f'{link}ICMS90/{link}vICMSST')
+        try:
+            vICMSST90 = vICMSST90.text
+        except:
+            vICMSST90 = str(0)
+        lvICMST90.append(vICMSST90)
 
     lcProdin = []
     for cProdin in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}prod/{link}cProd"):
@@ -57,14 +58,9 @@ def preco(cProd, margem, quantunit, xml):
         lvDesc.append(vDesc)
 
     #calculo do preco
-
     termo = lcProdin.index(cProd)
     desconto = float(lvDesc[termo])
-
-    try:
-        imposto = float(lvICMSST[termo])+float(lvFCPST[termo])
-    except:
-        imposto = float(0)
+    imposto = float(lvICMST90[termo])
 
     preco = ((1+(margem/100))*((float(lvProd[termo])+imposto-desconto)/float(lqCom[termo])))/quantunit
     preco = str(preco)
