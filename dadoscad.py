@@ -27,6 +27,15 @@ def preco(cProd, margem, quantunit, xml):
     link = '{http://www.portalfiscal.inf.br/nfe}'
 
     #Busca das informações necessárias
+    lvICMSST10 = []
+    for ICMS in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}imposto/{link}ICMS"):
+        vICMSST10 = ICMS.find(f'{link}ICMS10/{link}vICMSST')
+        try:
+            vICMSST10 = vICMSST10.text
+        except:
+            vICMSST10 = str(0)
+        lvICMSST10.append(vICMSST10)
+
     lvICMST90 = []
     for ICMS in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}imposto/{link}ICMS"):
         vICMSST90 = ICMS.find(f'{link}ICMS90/{link}vICMSST')
@@ -60,7 +69,7 @@ def preco(cProd, margem, quantunit, xml):
     #calculo do preco
     termo = lcProdin.index(cProd)
     desconto = float(lvDesc[termo])
-    imposto = float(lvICMST90[termo])
+    imposto = float(lvICMST90[termo])+float(lvICMSST10[termo])
 
     preco = ((1+(margem/100))*((float(lvProd[termo])+imposto-desconto)/float(lqCom[termo])))/quantunit
     preco = str(preco)

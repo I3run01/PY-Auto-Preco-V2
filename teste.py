@@ -1,19 +1,19 @@
 import xml.etree.ElementTree as ET
 
-xml = '41211201333984000438550010008691091114449877 (1).xml'
+xml = '41211213495487000253550010021789921287996756 (1).xml'
 
 tree = ET.parse(xml)
 root = tree.getroot()
 
 link = '{http://www.portalfiscal.inf.br/nfe}'
 
-lvICMST90 = []
+lvICMSST10 = []
 for ICMS in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}imposto/{link}ICMS"):
-    vICMSST90 = ICMS.find(f'{link}ICMS90/{link}vICMSST')
+    vICMSST10 = ICMS.find(f'{link}ICMS10/{link}vICMSST')
     try:
-        vICMSST90 = vICMSST90.text
+        vICMSST10 = vICMSST10.text
     except:
-        vICMSST90 = str(0)
-    lvICMST90.append(vICMSST90)
+        vICMSST10 = str(0)
+    lvICMSST10.append(vICMSST10)
 
-print(lvICMST90)
+print(lvICMSST10)
