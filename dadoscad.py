@@ -28,8 +28,8 @@ def preco(cProd, margem, quantunit, xml):
 
     #Busca das informações necessárias
     lvFCPST = []
-    for ICMS in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}imposto/{link}ICMS"):
-        vFCPST = ICMS.find(f'{link}ICMS10/{link}vFCPST')
+    for ICMS in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}imposto"):
+        vFCPST = ICMS.find(f'{link}ICMS/{link}ICMS10/{link}vFCPST')
         try:
             vFCPST = vFCPST.text
         except:
@@ -37,8 +37,8 @@ def preco(cProd, margem, quantunit, xml):
         lvFCPST.append(vFCPST)
 
     lIPI = []
-    for ICMS in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}imposto/{link}IPI"):
-        IPI = ICMS.find(f'{link}IPITrib/{link}vIPI')
+    for ICMS in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}imposto"):
+        IPI = ICMS.find(f'{link}IPI/{link}IPITrib/{link}vIPI')
         try:
             IPI = IPI.text
         except:
@@ -46,8 +46,8 @@ def preco(cProd, margem, quantunit, xml):
         lIPI.append(IPI)
 
     lvICMSST10 = []
-    for ICMS in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}imposto/{link}ICMS"):
-        vICMSST10 = ICMS.find(f'{link}ICMS10/{link}vICMSST')
+    for ICMS in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}imposto"):
+        vICMSST10 = ICMS.find(f'{link}ICMS/{link}ICMS10/{link}vICMSST')
         try:
             vICMSST10 = vICMSST10.text
         except:
@@ -55,8 +55,8 @@ def preco(cProd, margem, quantunit, xml):
         lvICMSST10.append(vICMSST10)
 
     lvICMST90 = []
-    for ICMS in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}imposto/{link}ICMS"):
-        vICMSST90 = ICMS.find(f'{link}ICMS90/{link}vICMSST')
+    for ICMS in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}imposto"):
+        vICMSST90 = ICMS.find(f'{link}ICMS/{link}ICMS90/{link}vICMSST')
         try:
             vICMSST90 = vICMSST90.text
         except:
@@ -76,8 +76,8 @@ def preco(cProd, margem, quantunit, xml):
         lqCom.append(qCom.text)
 
     lvDesc = []
-    for vDesc in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}prod"):
-        vDesc = vDesc.find(f'{link}vDesc')
+    for vDesc in root.findall(f"./{link}NFe/{link}infNFe/{link}det"):
+        vDesc = vDesc.find(f'{link}prod/{link}vDesc')
         try:
             vDesc = vDesc.text
         except:
