@@ -4,6 +4,7 @@ def apreco(cod,preco):
     import pyautogui
     import time
 
+
     if len(cod) == len(preco): 
         pyautogui.PAUSE = 1.5
         pyautogui.press('winleft')
@@ -19,7 +20,7 @@ def apreco(cod,preco):
         
         for c in range(0,len(cod)):
             pyautogui.tripleClick(200, 200)
-            pyautogui.write(cod[c])
+            pyautogui.write(cod[c][1:])
             pyautogui.press('enter')
             pyautogui.tripleClick(800,650)
             pyautogui.write(preco[c])
@@ -44,7 +45,7 @@ def ietiqueta(cod):
     pyautogui.click(250,100)
     for c in cod:
         pyautogui.tripleClick(100,320)
-        pyautogui.write(c)
+        pyautogui.write(c[1:])
         pyautogui.click(220,530)
         time.sleep(4)
         pyautogui.press('enter')

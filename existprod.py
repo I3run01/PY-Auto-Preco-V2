@@ -64,6 +64,7 @@ def cadp(xml, nomecsv):
                         print(f'Você está cadastrando o produto {dc.nome(c , xml)}')
                         time.sleep(1)
                         codigo = str(input('Código da empresa local para esse produto:'))
+                        codigo = str(f'f{codigo}')
                         margem = str(input('Margem do produto: '))
                         quantunit = str(input('Quantidade fracionada: '))
                         nome = dc.nome(c,xml)
