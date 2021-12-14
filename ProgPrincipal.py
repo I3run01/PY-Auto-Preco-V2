@@ -67,6 +67,10 @@ def bibemp(num):
         nome = 'STAMPA'
         nomecsv = 'Stampa BD.csv'
 
+    if num == '56228356005958':
+        nome = 'Ambev'
+        nomecsv = 'Ambev BD.csv'
+
 
     print('')
     print(f'Essa nota é da empresa: {nome}')
