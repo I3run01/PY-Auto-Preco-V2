@@ -6,7 +6,7 @@ def apreco(cod,preco):
 
 
     if len(cod) == len(preco): 
-        pyautogui.PAUSE = 1.5
+        pyautogui.PAUSE = 1.8
         pyautogui.press('winleft')
         pyautogui.write('gestor')
         pyautogui.press('enter')
@@ -32,7 +32,7 @@ def ietiqueta(cod):
     import pyautogui
     import time
 
-    pyautogui.PAUSE = 1.5
+    pyautogui.PAUSE = 1.8
     pyautogui.press('winleft')
     pyautogui.write('gestor')
     pyautogui.press('enter')
