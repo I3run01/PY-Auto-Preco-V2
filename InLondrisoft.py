@@ -15,9 +15,13 @@ def apreco(cod,preco):
         pyautogui.write('1515')
         pyautogui.press('enter')
         time.sleep(1)
+        pyautogui.click(770, 80)
+        pyautogui.click(500, 350)
+        pyautogui.click(500, 370)
+        for c in range(0,3):
+            pyautogui.press('enter')
         pyautogui.click(200,650)
         pyautogui.click(200,370)
-        
         for c in range(0,len(cod)):
             pyautogui.tripleClick(200, 200)
             pyautogui.write(cod[c][1:])
@@ -41,6 +45,11 @@ def ietiqueta(cod):
     pyautogui.write('1515')
     pyautogui.press('enter')
     time.sleep(1)
+    pyautogui.click(770, 80)
+    pyautogui.click(500, 350)
+    pyautogui.click(500, 370)
+    for c in range(0, 3):
+        pyautogui.press('enter')
     pyautogui.click(900,520)
     pyautogui.click(250,100)
     for c in cod:

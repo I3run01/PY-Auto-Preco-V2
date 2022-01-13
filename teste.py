@@ -13,6 +13,9 @@ for c in range(17,len(df)):
     preco = preco.replace('.',',')
     lprecos.append(preco)
 
-#il.apreco(lcodigos, lprecos)
-il.ietiqueta(lcodigos)
+
+il.apreco(lcodigos, lprecos)
+
+#il.ietiqueta(lcodigos)
+
 
