@@ -14,8 +14,8 @@ for c in range(17,len(df)):
     lprecos.append(preco)
 
 
-il.apreco(lcodigos, lprecos)
+#il.apreco(lcodigos, lprecos)
 
-#il.ietiqueta(lcodigos)
+il.ietiqueta(lcodigos)
 
 
