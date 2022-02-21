@@ -81,6 +81,8 @@ def cadp(xml, nomecsv):
                     break
                 if ops == 'S' and op =='3':
                     print(df)
+
+
         else:
             print('Todos os itens estão cadastrados')
             while True:
