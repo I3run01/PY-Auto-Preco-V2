@@ -6,6 +6,7 @@ def cadp(xml, nomecsv):
     import time
     import dadoscad as dc
     import InLondrisoft as IS
+    import Lgeral
 
     tree = ET.parse(xml)
     root = tree.getroot()
@@ -74,8 +75,10 @@ def cadp(xml, nomecsv):
                         df.to_csv(nomecsv)
                         print(f'O produto custa R${preco}')
                         print(f'O produto {nome} foi cadastrado!')
-                        lnprod.append(codigo)
-                        lnpreco.append(precobr)
+                        funcao = Lgeral.lgeral(codigo, nome,  margem, preco)
+                        if funcao == 'n':
+                            lnprod.append(codigo)
+                            lnpreco.append(precobr)
                         print(30*'-')
                     print(30*'-=')
                     break

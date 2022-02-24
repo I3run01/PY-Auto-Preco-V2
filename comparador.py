@@ -5,6 +5,7 @@ def comparador(xml, nomecsv):
     import pandas as pd
     import time
     import InLondrisoft as IS
+    import Lgeral
 
     tree = ET.parse(xml)
     root = tree.getroot()
@@ -38,8 +39,7 @@ def comparador(xml, nomecsv):
 
     for c in range(0, tam):
         lcode.append(df.iloc[c][0])
-    
-
+        Lgeral.lgeral(df.iloc[c][1],df.iloc[c][2], df.iloc[c][3],df.iloc[c][5])
 
     for cProd in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}prod/{link}cProd"):
         cProd = f'f{cProd.text}'
