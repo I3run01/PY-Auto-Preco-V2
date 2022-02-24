@@ -39,7 +39,7 @@ def comparador(xml, nomecsv):
 
     for c in range(0, tam):
         lcode.append(df.iloc[c][0])
-        Lgeral.lgeral(df.iloc[c][1],df.iloc[c][2], df.iloc[c][3],df.iloc[c][5])
+
 
     for cProd in root.findall(f"./{link}NFe/{link}infNFe/{link}det/{link}prod/{link}cProd"):
         cProd = f'f{cProd.text}'
@@ -50,6 +50,7 @@ def comparador(xml, nomecsv):
         nome = dadoscad.nome(cProd,xml)
         precon = dadoscad.preco(cProd,margem,quantunit,xml)
         precoa = df.iloc[indice][5]
+        Lgeral.lgeral(codigo, nome, margem, precon)
 
         if float(precon) > float(precoa):
             lindiceau.append(indice)
