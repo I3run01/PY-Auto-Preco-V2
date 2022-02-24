@@ -6,15 +6,21 @@ def lgeral(cod, nome, margem, preco):
 
     tamdf = len(df)
 
+    exist = 'n'
+    for c in range(0, tamdf):
 
-    for c in range(0, tamdf-1):
-        exist = 'n'
         if cod == df.loc[c][0]:
             exist = 's'
         else:
             df.loc[tamdf] = [cod, nome, margem, preco ]
 
-    print(df)
+    if exist == 'n':
+        df.to_csv('Geral BD.csv')
+    return exist
 
-lgeral('f2610211', 'Docile',  '50', '4.99')
+
+
+
+funcao = lgeral('f2610211', 'Docile',  '50', '4.99')
+print(funcao)
 
