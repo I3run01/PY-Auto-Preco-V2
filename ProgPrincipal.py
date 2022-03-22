@@ -154,5 +154,3 @@ CP.comparador(xml, nomecsv)
 
 
 
-
-
