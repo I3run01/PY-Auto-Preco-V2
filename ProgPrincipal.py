@@ -139,7 +139,7 @@ def bibemp(num):
         nome = 'Oliveira'
         nomecsv = 'Oliveira BD.csv'
     
-    if num == '77':
+    if num == '77595395000147':
         nome = 'Frimesa'
         nomecsv = 'Frimesa BD.csv'
 
