@@ -58,6 +58,8 @@ def ietiqueta(cod):
         pyautogui.click(220,530)
         time.sleep(4)
         pyautogui.press('enter')
+        time.sleep(2)
+        pyautogui.press('enter')
         time.sleep(1)
         pyautogui.click(260,60)
 
