@@ -73,14 +73,14 @@ def comparador(xml, nomecsv):
             lcodeinn.append(str(codigo))
     while True:
         print('''
-        0 - Finalizar o SoftWare
-        1 - Ver produtos que aumentaram
-        2 = Ver produtos que diminuiram
-        3 - Ver produtos que não tiveram aumento
-        4 - Atualizar os preços que aumentaram na LS
-        5 - Atualizar os preços que diminuiram na LS
-        6 - Imprimir os preços que aumentaram
-        7 - Imprimir os preços que diminuiram
+            0 - Finalizar o SoftWare
+            1 - Ver produtos que aumentaram
+            2 = Ver produtos que diminuiram
+            3 - Ver produtos que não tiveram aumento
+            4 - Atualizar os preços que aumentaram na LS
+            5 - Atualizar os preços que diminuiram na LS
+            6 - Imprimir os preços que aumentaram
+            7 - Imprimir os preços que diminuiram
         ''')
 
         op = int(input('Opção: '))
@@ -134,9 +134,6 @@ def comparador(xml, nomecsv):
 
         elif op == 7 and confirma == 'S':
             IS.ietiqueta(lcodeind)
-
-        else:
-            break
 
 
 
