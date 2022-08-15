@@ -139,9 +139,9 @@ def bibemp(num):
         nome = 'Oliveira'
         nomecsv = 'Oliveira BD.csv'
     
-    if num == '77595395000147' or num == '77595395000490':
-        nome = 'Frimesa'
-        nomecsv = 'Frimesa BD.csv'
+    if num == '29635803000102':
+        nome = 'Hawaii Distribuição de materiais'
+        nomecsv = 'Hawaii BD.csv'
 
     print('')
     print(f'Essa nota é da empresa: {nome}')
