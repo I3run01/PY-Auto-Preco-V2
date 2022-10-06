@@ -139,6 +139,9 @@ def comparador(xml, nomecsv):
         elif op == 8 and confirma == 'S':
             break
 
+        else:
+            continue
+
         
 
 
