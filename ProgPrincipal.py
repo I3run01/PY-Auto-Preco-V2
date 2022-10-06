@@ -154,6 +154,10 @@ def bibemp(num):
     elif num == '36486464000105':
         nome = 'Chef Distribuidora'
         nomecsv = 'Chef BD.csv'
+
+    elif num == '17467515002738':
+        nome = 'Cafe Tres Coracoes S.A'
+        nomecsv = 'Três corações BD.csv'
     
     else:
         print('Empresa não cadastrada')
