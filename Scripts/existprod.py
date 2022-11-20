@@ -4,8 +4,8 @@ def cadp(xml, nomecsv):
     import pandas as pd
     import xml.etree.ElementTree as ET
     import time
-    import dadoscad as dc
-    import InLondrisoft as IS
+    import Scripts.dadoscad as dc
+    import Scripts.InLondrisoft as IS
 
     tree = ET.parse(xml)
     root = tree.getroot()

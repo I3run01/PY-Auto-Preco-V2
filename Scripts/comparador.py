@@ -1,10 +1,10 @@
 def comparador(xml, nomecsv):
     #importações
     import xml.etree.ElementTree as ET
-    import dadoscad
+    import Scripts.dadoscad as dadoscad
     import pandas as pd
     import time
-    import InLondrisoft as IS
+    import Scripts.InLondrisoft as IS
 
     tree = ET.parse(xml)
     root = tree.getroot()

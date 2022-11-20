@@ -1,5 +1,5 @@
 import pandas as pd
-import InLondrisoft as il
+import Scripts.InLondrisoft as il
 
 
 df = pd.read_csv('Nestle BD.csv')

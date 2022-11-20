@@ -174,8 +174,8 @@ def bibemp(num):
 
 
 #import:
-import existprod
-import comparador as CP
+import Scripts.existprod as existprod
+import Scripts.comparador as CP
 
 #programa principal
 xml = str(input('Nome do arquivo: '))+'.xml'

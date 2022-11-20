@@ -1,5 +1,5 @@
 lcod = []
-import InLondrisoft
+import Scripts.InLondrisoft as InLondrisoft
 
 while True:
     cod = input(str('Código do produto:'))
