@@ -14,157 +14,158 @@ def cnpj(xml):
        
        return cnpjarq
        
-def bibemp(num):
-    if num == '62461140002834':
+def bibemp (cnpj):
+    if cnpj == '62461140002834':
         nome = 'Panco'
         nomecsv ='PBanco de dados/anco BD.csv'
         
-    elif num =='61186888014305':
+    elif cnpj =='61186888014305':
         nome ='Coca-Cola'
         nomecsv = 'Banco de dados/CC BD.csv'
 
-    elif num =='24782106000152':
+    elif cnpj =='24782106000152':
         nome ='Tirol'
         nomecsv = 'Banco de dados/Tirol BD.csv'
 
-    elif num == '77887412000543':
+    elif cnpj == '77887412000543':
         nome = 'DEYCON'
         nomecsv = 'Banco de dados/Deycon BD.csv'
 
-    elif num == '12133164000176':
+    elif cnpj == '12133164000176':
         nome = 'RD'
         nomecsv = 'Banco de dados/RD BD.csv'
 
-    elif num == '93209765047342':
+    elif cnpj == '93209765047342':
         nome = 'WMS'
         nomecsv = 'Banco de dados/WMS BD.csv'
 
-    elif num == '03303285000128':
+    elif cnpj == '03303285000128':
         nome = 'Arrojito'
         nomecsv = 'Banco de dados/Arrojito BD.csv'
 
-    elif num == '73778144000147':
+    elif cnpj == '73778144000147':
         nome = 'Triunfante'
         nomecsv = 'Banco de dados/Triunfante BD.csv'
 
-    elif num == '01333984000438':
+    elif cnpj == '01333984000438':
         nome = 'Segalas'
         nomecsv = 'Banco de dados/Segalas BD.csv'
 
-    elif num == '13495487000253':
+    elif cnpj == '13495487000253':
         nome = 'Destro'
         nomecsv = 'Banco de dados/Destro BD.csv'
 
-    elif num == '16624530000140':
+    elif cnpj == '16624530000140':
         nome = 'BOCCHI'
         nomecsv = 'Banco de dados/Bocchi BD.csv'
 
-    elif num == '07757548000120':
+    elif cnpj == '07757548000120':
         nome = 'CBN'
         nomecsv = 'Banco de dados/CBN BD.csv'
 
-    elif num == '11330623000149':
+    elif cnpj == '11330623000149':
         nome = 'STAMPA'
         nomecsv = 'Banco de dados/Stampa BD.csv'
 
-    elif num == '56228356005958':
+    elif cnpj == '56228356005958':
         nome = 'Ambev'
         nomecsv = 'Banco de dados/Ambev BD.csv'
 
-    elif num == '21381251000133':
+    elif cnpj == '21381251000133':
         nome = 'Vigor'
         nomecsv = 'Banco de dados/Vigor BD.csv'
 
-    elif num == '76492305000200':
+    elif cnpj == '76492305000200':
         nome = 'Ouro fino'
         nomecsv = 'Banco de dados/Ouro fino BD.csv'
 
-    elif num == '60409075019767':
+    elif cnpj == '60409075019767':
         nome = 'Nestle'
         nomecsv = 'Banco de dados/Nestle BD.csv'
 
-    elif num == '28842819000115':
+    elif cnpj == '28842819000115':
         nome = 'BDL'
         nomecsv = 'Banco de dados/BDL BD.csv'
 
-    elif num == '09241957000102':
+    elif cnpj == '09241957000102':
         nome = 'Amabile'
         nomecsv = 'Banco de dados/Amabile BD.csv'
 
-    elif num == '25769266002844':
+    elif cnpj == '25769266002844':
         nome = 'Arcom'
         nomecsv = 'Banco de dados/Arcom BD.csv'
 
-    elif num == '15814440000150':
+    elif cnpj == '15814440000150':
         nome = 'IBD'
         nomecsv = 'Banco de dados/IBD BD.csv'
 
-    elif num == '81611931000209':
+    elif cnpj == '81611931000209':
         nome = 'OESA'
         nomecsv = 'Banco de dados/OESA BD.csv'
 
-    elif num == '01838723012567':
+    elif cnpj == '01838723012567':
         nome = 'BRF'
         nomecsv = 'Banco de dados/BRF BD.csv'
 
-    elif num == '09095640000105':
+    elif cnpj == '09095640000105':
         nome = 'Sueko'
         nomecsv = 'Banco de dados/Sueko BD.csv'
 
-    elif num == '17790307000640':
+    elif cnpj == '17790307000640':
         nome = 'E-UB'
         nomecsv = 'Banco de dados/E-UB BD.csv'
 
-    elif num == '90724261000902':
+    elif cnpj == '90724261000902':
         nome = 'Oniz'
         nomecsv = 'Banco de dados/Oniz BD.csv'
 
-    elif num == '00249906000144':
+    elif cnpj == '00249906000144':
         nome = 'Lemes e Oliveiras'
         nomecsv = 'Banco de dados/Lemes e Oliveiras BD.csv'
 
-    elif num == '19195971000162':
+    elif cnpj == '19195971000162':
         nome = 'DP4'
         nomecsv = 'Banco de dados/DP4 BD.csv'
 
-    elif num == '01554188000182':
+    elif cnpj == '01554188000182':
         nome = 'Grupo Lobo'
         nomecsv = 'Banco de dados/Grupo Lobo BD.csv'
 
-    elif num == '10842044000384':
+    elif cnpj == '10842044000384':
         nome = 'Copini'
         nomecsv = 'Banco de dados/Copini BD.csv'
 
-    elif num == '24509214000156':
+    elif cnpj == '24509214000156':
         nome = 'Oliveira'
         nomecsv = 'Banco de dados/Oliveira BD.csv'
 
-    elif num == '77595395000490':
+    elif cnpj == '77595395000490':
         nome = 'Frimesa'
         nomecsv = 'Banco de dados/Frimesa BD.csv'
     
-    elif num == '29635803000102':
+    elif cnpj == '29635803000102':
         nome = 'Hawaii Distribuição de materiais'
         nomecsv = 'Banco de dados/Hawaii BD.csv'
 
-    elif num == '76430438010134':
+    elif cnpj == '76430438010134':
         nome = 'Max Atacadista'
         nomecsv = 'Banco de dados/Max BD.csv'
 
-    elif num == '36486464000105':
+    elif cnpj == '36486464000105':
         nome = 'Chef Distribuidora'
         nomecsv = 'Banco de dados/Chef BD.csv'
 
-    elif num == '17467515002738':
+    elif cnpj == '17467515002738':
         nome = 'Cafe Tres Coracoes S.A'
         nomecsv = 'Banco de dados/Três corações BD.csv'
 
-    elif num == '02914460045170':
+    elif cnpj == '02914460045170':
         nome = 'Seara'
         nomecsv = 'Banco de dados/Seara BD.csv'
     
     else:
         print('Empresa não cadastrada')
+        return
 
     print('')
     print(f'Essa nota é da empresa: {nome}')

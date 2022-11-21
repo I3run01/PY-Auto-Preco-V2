@@ -136,9 +136,6 @@ def comparador(xml, nomecsv):
         elif op == 7 and confirma == 'S':
             IS.ietiqueta(lcodeind)
 
-        elif op == 8 and confirma == 'S':
-            break
-
         else:
             continue
 

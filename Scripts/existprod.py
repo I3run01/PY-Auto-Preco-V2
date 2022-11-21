@@ -48,7 +48,7 @@ def cadp(xml, nomecsv):
             while True:
                 print(30*'-')
 
-                print('1 - Para continuar sem cadastrar\n2 - Para cadastrar os itens\n3 - Para ver a lista de produtos')
+                print('1 - Recarregar a página\n2 - Para cadastrar os itens\n3 - Para ver a lista de produtos')
                 print(30*'-')
                 time.sleep(1)
                 op = input(str('Opção: '))
