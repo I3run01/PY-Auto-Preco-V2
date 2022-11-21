@@ -81,7 +81,6 @@ def comparador(xml, nomecsv):
             5 - Atualizar os preços que diminuiram na LS
             6 - Imprimir os preços que aumentaram
             7 - Imprimir os preços que diminuiram
-            8 - Encerrar o software
         ''')
 
         op = int(input('Opção: '))
