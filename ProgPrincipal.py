@@ -166,7 +166,11 @@ def bibemp (cnpj):
     elif cnpj == '45614719000150':
         nome = 'Life'
         nomecsv = 'Banco de dados/Life BD.csv'
-    
+
+    elif cnpj == '38714277000159':
+        nome = 'Avante'
+        nomecsv = 'Banco de dados/Avante BD.csv'
+
     else:
         print('Empresa não cadastrada')
         return
