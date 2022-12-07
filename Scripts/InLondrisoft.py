@@ -35,6 +35,7 @@ def apreco(cod,preco):
 def ietiqueta(cod):
     import pyautogui
     import time
+    pyautogui.FAILSAFE = False
 
     pyautogui.PAUSE = 1.8
     pyautogui.press('winleft')
