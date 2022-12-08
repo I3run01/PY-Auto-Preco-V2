@@ -17,7 +17,7 @@ def cnpj(xml):
 def bibemp (cnpj):
     if cnpj == '62461140002834':
         nome = 'Panco'
-        nomecsv ='PBanco de dados/anco BD.csv'
+        nomecsv ='Banco de dados/Panco BD.csv'
         
     elif cnpj =='61186888014305':
         nome ='Coca-Cola'
