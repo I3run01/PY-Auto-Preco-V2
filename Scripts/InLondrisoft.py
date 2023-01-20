@@ -56,8 +56,8 @@ def ietiqueta(cod):
         pyautogui.press('enter')
         pyautogui.click(260,60)
 
-lcodigos = ['f155823', 'f1048'] 
-ietiqueta(lcodigos)
+#lcodigos = ['f155823', 'f1048'] 
+#ietiqueta(lcodigos)
 
 
     
