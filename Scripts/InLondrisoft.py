@@ -47,12 +47,12 @@ def ietiqueta(cod):
     pyautogui.click(900,520)
     pyautogui.click(250,100)
     for c in cod:
-        pyautogui.tripleClick(100,320)
+        pyautogui.tripleClick(400,400)
         pyautogui.write(c[1:])
         time.sleep(.5)
         pyautogui.press('enter')
         pyautogui.press('enter')
-        pyautogui.click(220,530)
+        pyautogui.click(480,600)
         pyautogui.press('enter')
         pyautogui.click(260,60)
 

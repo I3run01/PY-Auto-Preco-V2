@@ -1,8 +1,8 @@
 import pandas as pd
-import InLondrisoft as il
+import Scripts.InLondrisoft as il
 
 
-#df = pd.read_csv('Nestle BD.csv')
+df = pd.read_csv('Banco de dados/Nestle BD.csv')
 
 lcodigos = ['f155823']
 lprecos = []
