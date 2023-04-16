@@ -195,8 +195,16 @@ import Scripts.existprod as existprod
 import Scripts.comparador as CP
 
 #programa principal
-xml = str(input('Nome do arquivo: '))+'.xml'
-cnpj = cnpj(xml)
+
+while True:
+    xml = str(input('Nome do arquivo: '))+'.xml'
+
+    try:
+        cnpj = cnpj(xml)
+        break
+    except:
+        continue
+
 print(f'cnpj = {cnpj}')
 nomecsv = bibemp(cnpj)
 
