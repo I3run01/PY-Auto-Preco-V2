@@ -19,7 +19,7 @@ def bibemp (cnpj):
         nome = 'Panco'
         nomecsv ='Banco de dados/Panco BD.csv'
         
-    elif cnpj =='61186888014305':
+    elif cnpj =='61186888014305' or cnpj=='61186888012523':
         nome ='Coca-Cola'
         nomecsv = 'Banco de dados/CC BD.csv'
 
