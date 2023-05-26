@@ -1,3 +1,6 @@
+import Scripts.existprod as existprod
+import Scripts.comparador as CP
+
 def cnpj(xml):
 
     import xml.etree.ElementTree as ET
@@ -188,13 +191,6 @@ def bibemp (cnpj):
     print(30*'-')
 
     return nomecsv
-
-
-#import:
-import Scripts.existprod as existprod
-import Scripts.comparador as CP
-
-#programa principal
 
 while True:
     xml = str(input('Nome do arquivo: '))+'.xml'
