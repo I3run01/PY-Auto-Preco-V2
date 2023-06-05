@@ -8,7 +8,6 @@ def cnpj(xml):
     tree = ET.parse(xml)
     root = tree.getroot()
 
-
     link = '{http://www.portalfiscal.inf.br/nfe}'
    
 
